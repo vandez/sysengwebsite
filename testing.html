@@ -133,43 +133,64 @@
 								<div class="content">
 									<section>
 													We used testing both during and after development in order to ensure the function of our application both using systematic methods and involving live users.
-																		<br><br>Our plan for the testing will be to use Microsoft’s recommendation of how to test the Hololens for the best possible outcome, which will be summarised below:
+																		<br><br>
+																		<center><h3><strong>Iterations</strong></h3></center>
+																		<strong>Iteration 1</strong><br>
+																		We combined the UI with main function of the application which is the manipulation of the clothing. We originally had clothing selection separate on a different page.
+																		<br><br>
+																		<strong>Iteration 2</strong><br>
+																	  We changed the colour scheme of the app to feature more black and white as per the client’s request. We originally centred our colour scheme around a purple theme.
+																		<br><br>
+																		<strong>Iteration 3</strong><br>
+																		We added in use of image recognition to project holograms onto specific spaces with the help of the Vuforia framework, and improved our implementation of the chatbot.
+																		<br><br>
+																		<center><h3><strong>Unit and Integration</strong></h3></center>
+																		<strong>Unit testing</strong><br>
+																		For unit and integration, we made use of Unity’s Test Tools. An example of our unit testing was in the use of the AI Chatbot API within our application. We used a written unit test to check whether the query being entered into the input field was the query being sent to the API with the request:
+																		<br><br><strong>Integration testing</strong><br>
+																		<p>We used integration testing to ensure that the navigation between our applications main menu and the chatbot worked. We did this by running an integration test that checked if the canvas object that contained and displayed the chatbot was present after clicking the button in the main menu that opened the chatbot scene.</p>
+																		<center><h3><strong>Performance testing</strong></h3></center>
+																		<p>Performance testing was carried out manually during development. An example being when we noticed that our use of for loop to collect categories of clothing objects was slowing down our application and so we chose to use a tagging system that only analysed clothing objects when it was necessary such as in combination.</p>
 
-																		<center><h3><strong>User Testing</strong></h3></center>
-																		<strong>Testing 3D in 3D</strong><br>
-																		<ul>
-																				<li><strong>Test your app in as many different spaces as possible: </strong>Try app in different sized rooms. Rooms with non-standard features, going into halls, stairs etc.</li>
-																				<li><strong>Test your app in different lighting conditions: </strong>Different brightness, different surfaces.</li>
-																				<li><strong>Test your app in different motion conditions: </strong>Try in various states of motion.</li>
-																				<li><strong>Test how your app works from different angles: </strong>If you have a world locked hologram, what happens if your user walks behind it? What happens if something comes between the user and the hologram? What if the user looks at the hologram from above or below?</li>
-																				<li><strong>Use spatial and audio cues: </strong>Make sure your app uses these to prevent the user from getting lost.</li>
-																				<li><strong>Test your app at different levels of ambient noise: </strong>Try with varying levels of ambient noise.</li>
-																				<li><strong>Test your app seated and standing.</strong></li>
-																				<li><strong>Test your app from different distances: </strong>See how it reacts if hologram too close or far.</li>
-																				<li><strong>Test your app against common app bar interactions: </strong>Try positioning, closing and scaling app using app bar.</li>
-																				</ul>
+																		<center><h3><strong>User and Acceptance testing</strong></h3></center>
+																		<p>For user acceptance testing, we did alpha and beta testing. Alpha testing we obviously carried out ourselves both during development but the beta testing we ran with fellow students on our course. We gave them free roam to play with the application as they pleased but we also gave them test cases such as “ When you click the dresses button in the top left of the menu, does it display the dresses that we have available in our application?”. This helped get more specific feedback as to any oversights in the system that may lead to lesser functioning once the project was completed. An extract of written feedback that we got from one of our users:
+“The application responds well and as far as I can see all the test cases are fulfilled but sometimes I have trouble remembering the voice commands and it isn’t obvious which ones I should use.”
+This specific feedback led to us redoing our tutorial to contain further information specifically about voice commands and offering the option to redo the tutorial if the user wants to.</p>
+<div class="6u 12u(narrower)">
 
-																				<strong>System Integration Testing</strong><br>
-																				<br><ul>
-																				<center><img src="images/battery.png" style="width: 40%;"></center>
-																				<li><strong>Battery: </strong>Test without power source connected to see how quickly the application drains the battery. Easy to understand LED lights: 5 lights represent 20% battery each.</li>
-																				<li><strong>Power State Transitions: </strong>Does the application remain at its original position? Does it correctly persist its state? Does it continue to function as expected? E.g. when device goes into Standby / Resume or Shutdown / Restart. </li>
-																				<li><strong>Multi-App Scenarios: </strong>Validate core app functionality when switching between apps, especially if you've implemented a background task. Copy/Paste and Cortana integration are also worth checking where applicable.</li>
-																				</ul>
+										<table>
+										<thead>
+												<tr>Test cases</tr>
+										</thead>
 
-																<center><h3><strong>Simulating Input and Automate Testing</strong></h3></center>
-																<strong>Simulated Input</strong><br>
-																<ul>
-																<li><strong>Use the emulator's virtual rooms to expand your testing: </strong>The emulator comes with a set of virtual rooms that you can use to test your app in even more environments.</li>
-																<li><strong>Use the emulator to look at your app from all angles: </strong>The PageUp/PageDn keys will make your simulated user taller or shorter.</li>
-																</ul>
-																<center><img src="images/menu.png" style="width: 50%;"></center>
-																<br><strong>Automated Testing</strong><br>
-																<br>For automated testing, we intend another method suggested by Microsoft called Perception Simulation. There are many classes involved in this, which are explained in the following link:
-																<br><a href="https://developer.microsoft.com/en-us/windows/holographic/perception_simulation">https://developer.microsoft.com/en-us/windows/holographic/perception_simulation</a><br>
-																<br>All of the information on this page has been obtained in some form, from:
-																<br><a href="https://developer.microsoft.com/en-us/windows/holographic/testing">https://developer.microsoft.com/en-us/windows/holographic/testing</a>
+												<tbody>
+														<tr>
+																<td>Tutorial should teach the user how to use the application.</td>
+														</tr>
+														<tr>
+																<td>User should be easily able to move, rotate and resize clothing.</td>
+														</tr>
+														<tr>
+																<td>User should be able to select different clothing and combine them.</td>
+														</tr>
+														<tr>
+																<td>User should be able easily access the chatbot.</td>
+														</tr>
+														<tr>
+																<td>Tutorial should teach the user how to use the application.</td>
+														</tr>
+														<tr>
+																<td>User should be able to use the keyboard to submit a query to the chatbot.</td>
+														</tr>
+														<tr>
+																<td> User should be able to select different categories of clothing easily and combine them.</td>
+														</tr>
+												</tbody>
 
+
+												</table>
+										</div>
+										<p>Compatibility, responsive design, security and automated testing weren’t applicable or necessary for our project and application. Our application was built to run on the Microsoft HoloLens as an augmented reality application and so cannot be run on any other devices such as the Oculus Rift. For this reason, we know its compatibility is ensured as our extended development on this single device has proved it. Responsive design testing wasn’t necessary for a similar reason in that the design of our application and its UI remains the same as it can only be run on the Microsoft HoloLens which has limited customisability in this point in time. Security testing isn’t necessary as our application is self-contained and its only connection to the internet is via the Chatbot API and their security is obviously of their concern. The application also doesn’t and will not contain sensitive data that can be extracted. Automated testing was difficult due to the nature of our program due to the input-timing consideration of usage we found it more natural to test with real users. </p>
 
 																		</section>
 								</div>
