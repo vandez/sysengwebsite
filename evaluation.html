@@ -63,8 +63,8 @@
 							<li class="submenu">
 								<a href="documentation.html">Evaluation</a>
 								<ul style="list-style: none;">
-									<li><a href=""target="_blank">Critical Evaluation</a></li>
-									<li><a href="">Summary of achievements</a></li>
+									<li><a href=""target="_blank">Summary of achievements</a></li>
+									<li><a href="">Critical Evaluation</a></li>
 									<li><a href="">Future work</a></li>
 								</ul>
 							</li>
@@ -96,6 +96,218 @@
 								<div class="content">
 									<section>
                                         <center><h3><strong>Summary of achievements</strong></h3></center>
+												                                    <table>
+												                                    <thead>
+												                                        <tr> Requirements</tr>
+												                                    <tr>
+												                                    <th> ID</th>
+												                                    <th> Requirement</th>
+																														<th> Priority</th>
+																														<th> Completion status </th>
+																														<th> Contributors </th>
+												                                        </tr>
+												                                    </thead>
+
+												                                        <tbody>
+												                                            <tr>
+												                                                <td> F1 </td>
+												                                                <td> Ability to choose more than one item of clothing.</td>
+																																				<td> Must have </td>
+																																				<td>  Complete</td>
+																																				<td>  </td>
+												                                            </tr>
+												                                            <tr>
+												                                                <td> F2 </td>
+												                                                <td>Ability to try on more than one item of clothing at the same time.</td>
+																																				<td> Must have </td>
+																																				<td> Complete </td>
+																																				<td>  </td>
+												                                            </tr>
+												                                            <tr>
+												                                                <td> F3 </td>
+												                                                <td>Ability to place, rotate and resize items of clothing within the application.</td>
+																																				<td> Must have </td>
+																																				<td> Complete </td>
+																																				<td>  </td>
+												                                            </tr>
+												                                            <tr>
+												                                                <td> F4 </td>
+												                                                <td>Ability to use image recognition technology to project garment hologram such as bracelet.</td>
+																																				<td> Must have </td>
+																																				<td>Complete</td>
+																																				<td>  </td>
+												                                            </tr>
+												                                            <tr>
+												                                                <td> NF1 </td>
+												                                                <td>Show buttons to navigate through different categories of clothing</td>
+																																				<td> Must have </td>
+																																				<td> Complete</td>
+																																				<td>  </td>
+												                                            </tr>
+												                                            <tr>
+												                                                <td> F5 </td>
+												                                                <td>Use voice recognition to change item of clothing worn based on categories. </td>
+																																				<td> Should have </td>
+																																				<td>Complete</td>
+																																				<td>  </td>
+												                                            </tr>
+												                                            <tr>
+												                                                <td> F6 </td>
+												                                                <td>Use voice recognition to display product information including purchase and sizing (chat bot).</td>
+																																				<td> Should have </td>
+																																				<td>Complete</td>
+																																				<td>  </td>
+												                                            </tr>
+												                                            <tr>
+												                                                <td> F7 </td>
+												                                                <td>Use voice recognition to place, rotate and resize garments in their space.</td>
+																																				<td> Should have </td>
+																																				<td>Complete</td>
+																																				<td>  </td>
+												                                            </tr>
+																																		<tr>
+												                                                <td> NF2 </td>
+												                                                <td>Help available by tapping on a button</td>
+																																				<td> Should have </td>
+																																				<td> Complete</td>
+																																				<td>  </td>
+												                                            </tr>
+												                                            <tr>
+												                                                <td> NF3 </td>
+												                                                <td> Displaying help available by voice commands</td>
+																																				<td> Should have </td>
+																																				<td> Complete</td>
+																																				<td>  </td>
+												                                            </tr>
+												                                            <tr>
+												                                                <td> UI1 </td>
+												                                                <td>Easy to use and navigate through the pages of the menu</td>
+																																				<td> Should have </td>
+																																				<td> Complete</td>
+																																				<td>  </td>
+												                                            </tr>
+												                                            <tr>
+												                                                <td> F8 </td>
+												                                                <td>Ability to shortlist clothing to purchase on their website (add to basket)</td>
+																																				<td> Could have </td>
+																																				<td> N/A </td>
+																																				<td> N/A </td>
+												                                            </tr>
+												                                            <tr>
+												                                                <td> F9 </td>
+												                                                <td>Use voice recognition to add to basket</td>
+																																				<td> Could have </td>
+																																				<td> N/A </td>
+																																				<td> N/A </td>
+												                                            </tr>
+												                                            <tr>
+												                                                <td> NF4 </td>
+												                                                <td> Avatar has to look like the user</td>
+																																				<td> Could have </td>
+																																				<td> N/A </td>
+																																				<td> N/A </td>
+												                                            </tr>
+												                                            <tr>
+												                                                <td> NF5 </td>
+												                                                <td> Show basket page</td>
+																																				<td> Could have </td>
+																																				<td> N/A </td>
+																																				<td> N/A </td>
+												                                            </tr>
+												                                            <tr>
+												                                                <td> NF6 </td>
+												                                                <td>Simulate texture of clothing.</td>
+																																				<td> Would have </td>
+																																				<td> N/A </td>
+																																				<td> N/A </td>
+												                                            </tr>
+																																		<tr>
+																																				<td> NF7 </td>
+																																				<td>Show clothing virtually worn on the user’s body</td>
+																																				<td> Would have </td>
+																																				<td> N/A </td>
+																																				<td> N/A </td>
+																																		</tr>
+												                                        </tbody>
+												                                        </table>
+<strong> Challenges</strong>
+<ul>
+	<li>Loading and unloading clothing objects</li>
+	<p> To allow the user to pick what clothes they wanted to interact with, we had to find a method of loading/unloading clothing objects. We did this by using the Renderer component of a gameobject in Unity. When certain buttons in the UI are pressed the script in the background will stop the rendering of certain clothes or start rendering others.</p>
+	<li>Using gestures to manipulate clothing</li>
+	<p> Used the HoloToolKit with the scripts that facilitate the use of gestures and various helper scripts that make it more reliable. We then connected gestures with scripts that adjuts the Transform components of the clothing objects which allow them to move, rotate and resize clothing.</p>
+	<li> Using the Chatbot API</li>
+	<p> Had to use a class in Unity to make HTTP requests to the AI Chatbot API so we could allow users to input queries and then quickly get and displays responses with the relevant information.</p>
+</ul>
+
+<strong>Incomplete features/bugs </strong>
+<ul>
+	<li> The chatbot doesn't display relevant information such as the image of the product or possibly the URL of the product on the NET-A-PORTER website.</li>
+	<li> The information about the clothing on the main menu isn't dynamic and is there just as concept for the clothing that we have available </li>
+</ul>
+	<table>
+	<thead>
+			<tr> Work distribution</tr>
+	<tr>
+	<th> Work package</th>
+	<th> Category</th>
+	<th> Contributers</th>
+			</tr>
+	</thead>
+
+			<tbody>
+					<tr>
+							<td> Bi-weekly Reports </td>
+							<td> Reports</td>
+							<td> All </td>
+					</tr>
+					<tr>
+							<td> Elevator Pitch </td>
+							<td> Presentation</td>
+							<td> All </td>
+					</tr>
+					<tr>
+							<td> Website </td>
+							<td> Deliverable</td>
+							<td> All </td>
+					</tr>
+					<tr>
+							<td> Video </td>
+							<td> Deliverable</td>
+							<td> Vania </td>
+					</tr>
+					<tr>
+							<td> Final Presentation </td>
+							<td> Presentation</td>
+							<td> All </td>
+					</tr>
+					<tr>
+							<td> Poster </td>
+							<td> Deliverable</td>
+							<td> Yll and Vania </td>
+					</tr>
+					<tr>
+							<td> Client meetings </td>
+							<td> Client Liaison</td>
+							<td> All </td>
+					</tr>
+					<tr>
+							<td> Client communication </td>
+							<td> Client Liaison</td>
+							<td> Vania </td>
+					</tr>
+					<tr>
+							<td> Scanning garments </td>
+							<td> Project</td>
+							<td> All </td>
+					</tr>
+					<tr>
+							<td> Testing </td>
+							<td> Project</td>
+							<td> All </td>
+					</tr>
+			</tbody>
+			</table>
 																				<center><h3><strong>Critical evaluation</strong></h3></center>
 																				<center><h3><strong>Future work</strong></h3></center>
 																				<p>Due to the fact that this project was meant as a concept for such a big company it meant we were encouraged to innovate as much as could. This has left many different avenues we could go down if we had more time with the project.</p>
