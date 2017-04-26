@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<!--
+	Twenty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Development</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/pages.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body class="no-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">NET-A-PORTER AR <span>by TEAM 27</span></a></h1>
+					<nav id="nav">
+						<ul style="list-style: none;">
+							<li class="current"><li class="submenu">
+                                <a href="index.html">Home</a>
+                                <ul style="list-style: none;">
+									<li><a href="index.html#introduction">Introduction</a></li>
+									<li><a href="index.html#team">Meet the team</a></li>
+									<li><a href="index.html#features">Features</a></li>
+								</ul>
+                            
+                            </li>
+                            </li>
+                        
+							<li class="submenu">
+								<a href="research.html">Research</a>
+								<ul style="list-style: none;">
+									<li><a href="research.html#requirements">Requirements</a></li>
+                                    <li><a href="research.html#use-cases">Use Cases</a></li>
+									<li><a href="research.html#research-results">Research Results</a></li>
+								</ul>
+							</li>
+                        
+                        <li class="submenu">
+								<a href="design.html">Design</a>
+								<ul style="list-style: none;">
+									<li><a href="design.html">Design</a></li>
+                                    <li><a href="hci.html">HCI</a></li>
+								</ul>
+							</li>
+                        
+                        <li class="submenu">
+								<a href="development.html">Development</a>
+								<ul style="list-style: none;">
+									<li><a href="prototype.html">Prototype</a></li>
+									<li><a href="experiments.html">Experiments</a></li>
+                                    <li><a href="userinterface.html">User Interface</a></li>
+                                    <li><a href="testing.html">Testing</a></li>
+                                    <li><a href="development.html#plans">Plans</a></li>
+								</ul>
+							</li>
+                        
+                        <li class="submenu">
+								<a href="documentation.html">Documentation</a>
+								<ul style="list-style: none;">
+									<li><a href="https://gitlab.cs.ucl.ac.uk/vania/team27website"target="_blank">GitLab Repository</a></li>
+									<li><a href="biweekly-reports.html">Biweekly Reports</a></li>
+                                    <li><a href="documentation.html#management">Management</a></li>
+                                </ul>
+							</li>
+							
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<article id="main">
+
+					<header class="special container">
+						<span class="fa fa-cogs fa-3x"></span>
+						<h2>Development</h2>
+					</header>
+
+					<!-- One -->
+						<section class="wrapper style4 container" style="padding-top: 20px;">
+
+							<!-- Content -->
+								<div class="content">
+									<section>
+                                        <center><h3><strong>Development</strong></h3></center>
+                                    <center><img src="images/vsunityvuforia.png"></center>
+                                    Holographic app development uses Visual Studio 2015 Update 3 with the Windows 10 SDK (version 1511 or later) and Unity engine to build the 3D scenes. There is no separate SDK for Hololens, so all development is done in Visual Studio and Unity. There is, however, an external SDK called Vuforia that we are going to implement in our app.
+                                    <br><br><strong>Operating system configuration:</strong>
+                                    <br><ul style="margin-bottom: 0px;">
+                                        <li>To install Visual Studio, Tools (1.4) and Windows 10 SDK (10.0.10586) need to be enabled under the Universal Windows App Development Tools node. </li>
+                                        <li>Unity 5.5 can be downloaded directly from the website.</li>
+                                        <li>Hololens Emulator which can be downloaded and installed from Microsoft Dev Center’s website. It requires Hyper-V to be installed on a Windows machine. Hyper-V can be enabled by running the following command:</li>
+                                        </ul>
+                                        <center><img src="images/hyper-v.png"></center>
+                                        <ul>
+                                        <li>The package for Vuforia for Unity can be downloaded from Vuforia’s website.</li>
+                                        </ul>
+                                        <strong>Build and Integration process:</strong>
+                                        <br><ul style="margin-bottom: 20px;">
+                                        <li>Create a Unity project, setup the main virtual camera and 3D scene.</li>
+                                        <li>Export the Unity project to Visual Studio.</li>
+                                        <li>Deploy it to Hololens on Visual Studio by clicking Debug -> Start without debugging.</li>
+                                        </ul>
+                                        If user input like gesture or voice command is needed, scripts in C# need to be created and edited in Visual Studio.
+                                        <ul>
+                                        <li>Create scripts in the project panel.</li>
+                                        <li>Select C# script.</li>
+                                        <li>Open the script in Visual Studio and edit the code accordingly.</li>
+                                        <li>Save and reload it in Visual Studio.</li>
+                                        <li>Deploy it to Hololens by clicking Debug -> Start without debugging.</li>
+                                        </ul>
+                                        <strong>Layers involved in our application:</strong>
+                                        <br><ul>
+                                        <li>3D scans are done in Sense 3D Scanner software and saved as an .obj file.</li>
+                                        <li>3D models are imported to Unity.</li>
+                                        <li>Scenes are built in Unity, along with main virtual camera.</li>
+                                        <li>Unity project is exported into Visual Studio and deployed into Hololens.</li>
+                                        <li>Integration of Net-a-Porter API to connect with their server so that users can place orders and be redirected to Net-a-Porter’s website to complete their purchase. </li>
+                                        </ul>
+                                        <strong>Adaptation from the open source community</strong>
+                                        <br>We used tutorials available from Microsoft Development Center’s website called Holographic Academy to familiarise ourselves with the Unity and Visual Studio environment and to learn how to implement features such as gesture input and voice commands using C# scripts. We also learned how to deploy our projects to Hololens. We used Unity UI tutorials to create the user interface for our application. As we going to implement Vuforia in our application, we installed the Vuforia Unity Extension and followed tutorials from their website to be able to successfully integrate the features on Unity.
+                                        <br><br><h3><center><strong>Plans</strong></center></h3>
+                                        <a name="plans"></a>
+                                        In term 2, we intend to focus more fully on the user’s experience of “trying on” the clothes. Right now we have two avenues which we have to pick depending on feasibility. Our first choice would be to have the user look at a mirror with the HoloLens would project the 3D model onto their bodies. Our second option would be to create an avatar of the user’s body and place the 3D models on top of it. The user would then be able to look and observe the avatar from all angles. The first option has the added benefit that it’s the user’s real body and that adds to the realism but that may be impossible or too difficult in the time frame given to achieve. Although, the second option we know is possible from various discussions with our TA and research we’ve done personally.
+                                        <br><br>We have to carry on development of our UI as long as our main function of displaying clothes works. This also includes use of an API to make products shortlisted within our application come up on the Net-a-porter website.
+                                    </section>
+								</div>
+
+						</section>
+
+        </article>
+
+			<section id="cta">
+
+					<header>
+						<h2>Further <strong>Development</strong></h2>
+					</header>
+					<footer>
+						<ul class="buttons">
+							<li><a href="prototype.html" class="button">Prototype</a></li>
+							<li><a href="experiments.html" class="button">Experiments</a></li>
+                            <li><a href="userinterface.html" class="button">User Interface</a></li>
+                            <li><a href="testing.html" class="button">Testing</a></li>
+						</ul>
+					</footer>
+
+				</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

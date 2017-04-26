@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<!--
+	Twenty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Testing</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/pages.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body class="no-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">NET-A-PORTER AR <span>by TEAM 27</span></a></h1>
+					<nav id="nav">
+						<ul style="list-style: none;">
+							<li class="current"><li class="submenu">
+                                <a href="index.html">Home</a>
+                                <ul style="list-style: none;">
+									<li><a href="index.html#introduction">Introduction</a></li>
+									<li><a href="index.html#team">Meet the team</a></li>
+									<li><a href="index.html#features">Features</a></li>
+								</ul>
+                            
+                            </li>
+                            
+                        
+							<li class="submenu">
+								<a href="research.html">Research</a>
+								<ul style="list-style: none;">
+									<li><a href="research.html#requirements">Requirements</a></li>
+                                    <li><a href="research.html#use-cases">Use Cases</a></li>
+									<li><a href="research.html#research-results">Research Results</a></li>
+								</ul>
+							</li>
+                        
+                        <li class="submenu">
+								<a href="design.html">Design</a>
+								<ul style="list-style: none;">
+									<li><a href="design.html">Design</a></li>
+                                    <li><a href="hci.html">HCI</a></li>
+								</ul>
+							</li>
+                        
+                        <li class="submenu">
+								<a href="development.html">Development</a>
+								<ul style="list-style: none;">
+									<li><a href="prototype.html">Prototype</a></li>
+									<li><a href="experiments.html">Experiments</a></li>
+                                    <li><a href="userinterface.html">User Interface</a></li>
+                                    <li><a href="testing.html">Testing</a></li>
+                                    <li><a href="development.html#plans">Plans</a></li>
+								</ul>
+							</li>
+                        
+                        <li class="submenu">
+								<a href="documentation.html">Documentation</a>
+								<ul style="list-style: none;">
+									<li><a href="https://gitlab.cs.ucl.ac.uk/vania/team27website"target="_blank">GitLab Repository</a></li>
+									<li><a href="biweekly-reports.html">Biweekly Reports</a></li>
+                                    <li><a href="documentation.html#management">Management</a></li>
+                                </ul>
+							</li>
+							
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<article id="main">
+
+					<header class="special container">
+						<span class="fa fa-check-circle-o fa-3x"></span>
+						<h2>Testing</h2>
+					</header>
+
+					<!-- One -->
+						<section class="wrapper style4 container" style="padding-top: 20px;">
+
+							<!-- Content -->
+								<div class="content">
+									<section>
+                                    Although we have not done any testing so far, our plan for testing will be split up into two stages: and the first stage will be user testing, i.e. getting external feedback from people and the second stage will be testing using simulated inputs and automated testing.
+
+                                    <br><br>Our plan for the testing will be to use Microsoft’s recommendation of how to test the Hololens for the best possible outcome, which will be summarised below:
+
+                                    <center><h3><strong>User Testing</strong></h3></center>
+                                    <strong>Testing 3D in 3D</strong><br>
+                                    <ul>
+                                        <li><strong>Test your app in as many different spaces as possible: </strong>Try app in different sized rooms. Rooms with non-standard features, going into halls, stairs etc.</li>
+                                        <li><strong>Test your app in different lighting conditions: </strong>Different brightness, different surfaces.</li>
+                                        <li><strong>Test your app in different motion conditions: </strong>Try in various states of motion.</li>
+                                        <li><strong>Test how your app works from different angles: </strong>If you have a world locked hologram, what happens if your user walks behind it? What happens if something comes between the user and the hologram? What if the user looks at the hologram from above or below?</li>
+                                        <li><strong>Use spatial and audio cues: </strong>Make sure your app uses these to prevent the user from getting lost.</li>
+                                        <li><strong>Test your app at different levels of ambient noise: </strong>Try with varying levels of ambient noise.</li>
+                                        <li><strong>Test your app seated and standing.</strong></li>
+                                        <li><strong>Test your app from different distances: </strong>See how it reacts if hologram too close or far.</li>
+                                        <li><strong>Test your app against common app bar interactions: </strong>Try positioning, closing and scaling app using app bar.</li>
+                                        </ul>
+                                   
+                                        <strong>System Integration Testing</strong><br>
+                                        <br><ul>
+                                        <center><img src="images/battery.png" style="width: 40%;"></center>
+                                        <li><strong>Battery: </strong>Test without power source connected to see how quickly the application drains the battery. Easy to understand LED lights: 5 lights represent 20% battery each.</li>
+                                        <li><strong>Power State Transitions: </strong>Does the application remain at its original position? Does it correctly persist its state? Does it continue to function as expected? E.g. when device goes into Standby / Resume or Shutdown / Restart. </li>
+                                        <li><strong>Multi-App Scenarios: </strong>Validate core app functionality when switching between apps, especially if you've implemented a background task. Copy/Paste and Cortana integration are also worth checking where applicable.</li>
+                                        </ul>
+                                
+                                <center><h3><strong>Simulating Input and Automate Testing</strong></h3></center>
+                                <strong>Simulated Input</strong><br>
+                                <ul>
+                                <li><strong>Use the emulator's virtual rooms to expand your testing: </strong>The emulator comes with a set of virtual rooms that you can use to test your app in even more environments.</li>
+                                <li><strong>Use the emulator to look at your app from all angles: </strong>The PageUp/PageDn keys will make your simulated user taller or shorter.</li>
+                                </ul>
+                                <center><img src="images/menu.png" style="width: 50%;"></center>
+                                <br><strong>Automated Testing</strong><br>
+                                <br>For automated testing, we intend another method suggested by Microsoft called Perception Simulation. There are many classes involved in this, which are explained in the following link:
+                                <br><a href="https://developer.microsoft.com/en-us/windows/holographic/perception_simulation">https://developer.microsoft.com/en-us/windows/holographic/perception_simulation</a><br>
+                                <br>All of the information on this page has been obtained in some form, from:
+                                <br><a href="https://developer.microsoft.com/en-us/windows/holographic/testing">https://developer.microsoft.com/en-us/windows/holographic/testing</a>
+                                
+                                        
+                                    </section>
+								</div>
+
+						</section>
+
+        </article>
+
+			<section id="cta">
+
+					<header>
+						<h2>Further <strong>Development</strong></h2>
+					</header>
+					<footer>
+						<ul class="buttons">
+							<li><a href="prototype.html" class="button">Prototype</a></li>
+							<li><a href="experiments.html" class="button">Experiments</a></li>
+                            <li><a href="userinterface.html" class="button">User Interface</a></li>
+                            <li><a href="testing.html" class="button">Testing</a></li>
+						</ul>
+					</footer>
+
+				</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

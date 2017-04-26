@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<!--
+	Twenty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>HCI</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/pages.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body class="no-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">NET-A-PORTER AR <span>by TEAM 27</span></a></h1>
+					<nav id="nav">
+						<ul style="list-style: none;">
+							<li class="current"><li class="submenu">
+                                <a href="index.html">Home</a>
+                                <ul style="list-style: none;">
+									<li><a href="index.html#introduction">Introduction</a></li>
+									<li><a href="index.html#team">Meet the team</a></li>
+									<li><a href="index.html#features">Features</a></li>
+								</ul>
+                            
+                            </li>
+                            </li>
+                        
+							<li class="submenu">
+								<a href="research.html">Research</a>
+								<ul style="list-style: none;">
+									<li><a href="research.html#requirements">Requirements</a></li>
+                                    <li><a href="research.html#use-cases">Use Cases</a></li>
+									<li><a href="research.html#research-results">Research Results</a></li>
+								</ul>
+							</li>
+                        
+                       <li class="submenu">
+								<a href="design.html">Design</a>
+								<ul style="list-style: none;">
+									<li><a href="design.html">Design</a></li>
+                                    <li><a href="hci.html">HCI</a></li>
+								</ul>
+							</li>
+                        
+                        <li class="submenu">
+								<a href="development.html">Development</a>
+								<ul style="list-style: none;">
+									<li><a href="prototype.html">Prototype</a></li>
+									<li><a href="experiments.html">Experiments</a></li>
+                                    <li><a href="userinterface.html">User Interface</a></li>
+                                    <li><a href="testing.html">Testing</a></li>
+                                    <li><a href="development.html#plans">Plans</a></li>
+								</ul>
+							</li>
+                        
+                        <li class="submenu">
+								<a href="documentation.html">Documentation</a>
+								<ul style="list-style: none;">
+									<li><a href="https://gitlab.cs.ucl.ac.uk/vania/team27website"target="_blank">GitLab Repository</a></li>
+									<li><a href="biweekly-reports.html">Biweekly Reports</a></li>
+                                    <li><a href="documentation.html#management">Management</a></li>
+                                </ul>
+							</li>
+							
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<article id="main">
+
+					<header class="special container">
+						<span class="fa fa-television fa-3x"></span>
+						<h2>HCI</h2>
+					</header>
+
+					<!-- One -->
+						<section class="wrapper style4 container" style="padding-top: 20px;">
+
+							<!-- Content -->
+								<div class="content">
+									<section>
+                                        <center><h3><strong>Sketches</strong></h3></center>
+                                        <center><img src="images/paper1.jpg" width="70%"></center>
+                                        
+                                        <center>Intial sketch</center>
+                                        <br>
+                                        <center><img src="images/paper2.jpg" width="70%"></center>
+                                        <center>Final sketch</center>
+                                        <br>
+                                        <center><h3><strong>Mock ups</strong></h3></center>
+                                        <center><img src="images/mockup.png" width="70%"></center>
+                                        <br>
+                                        <center><h3><strong>HCI Principles</strong></h3></center>
+                                    Throughout development, we had these human-computer interaction (HCI) design principles in mind. These principles help us to always think of the users to deliver a product that is usable and more enjoyable for the users. 
+                                        <br><br><strong>Visibility:</strong><br>
+                                        An essential part of a good human-computer interaction design is visibility, i.e. it should be obvious what a control is for and it should be made clear what users have to do next. For this principle, we created a UI that is easy to follow and all the UI elements are visible to the users.
+                                        <br><br>
+                                        In the first screen of the app, the user will see a welcome page with a voice guide playing over it. Once the voice guidance has finished talking, a text that shows “Say “next” to continue” will appear on the screen so that the user will know what to do next and how to transition to the next screen.
+                                        <br><br>
+                                        Once the user is in the page of the main app, the panels and buttons are all laid out in front of the users. An important property for all of the UI elements found throughout the app is that we specified the distance between the Hololens camera and the UI to ensure that the elements are always placed in a fixed position when the scene is loaded so that the user can see the UI elements in its entirety without being too close that they can only see a small part of something, or too far that they cannot read or see what the screen is displaying.
+                                        <br><br>
+                                        Other scripts that we implemented on all the UI elements to ensure visibility are the “Billboard” and “Tagalong” scripts. The Billboard script ensures that the UI is always facing the user. For example, when a user wants to view the garment from a different angle, the menu and panels will also rotate so that they will always face the user and thus the user can operate the app and navigate between scenes regardless of where they view the app from. The Tagalong script ensures that the panels and buttons follow the user’s gaze. For example, during the welcome and tutorials page, the user wearing the Hololens may be moving their head and directing their gaze somewhere else. To ensure that the menu is not hidden or ‘lost’, we implemented the Tagalong script so that when the direction of the gaze is moved, the UI elements will follow and hence they will still be visible to users.
+                                        <br><br>
+                                        <strong>Feedback:</strong>
+                                        <br>
+                                        A well-designed app should be able to give users feedback. “A feedback is about sending back information about what action has been done and what has been accomplished, allowing the user to continue with the activity.” (Norman, D.)
+                                        <br><br>
+                                        To achieve this principle, we have implemented sound feedback and animation for all the buttons in the app. When a button is being hovered over by the cursor, the button will move forward slightly, the color of the button will change from grey to white and a short click sound is played. This is to give the user a sense of acknowledgment on their action and to give them feedback that their cursor is on the button that they intended to press.
+                                        <br><br>
+                                        After a button is clicked, the button will stay in the slightly forward position and the button stays white. This is to let the user know that this is the button that they have recently selected and that it is the current active button.
+                                        <br><br>
+                                        <strong>Constraints:</strong>
+                                        <br>
+                                        A good HCI design should be able to have constraints, in which the kind of user interaction that can take place in a given moment is restricted to prevent user input actions that are not allowed. 
+                                        <br><br>
+                                        In our app, we have placed some user interaction constraints. For example, when the help screen is displayed, the user cannot manipulate the garments even though the help screen is displayed over the garments. 
+                                        <br><br>
+                                        <strong>Mapping:</strong>
+                                        <br>
+                                        Mapping refers to the intuitive relation between control and effect. For instance, up and down buttons should correspond to moving the cursor up or down, respectively.
+                                        <br><br>
+                                        In our app, we implemented mapping by adding a left arrow button for ‘previous’ and right arrow button for ‘next’ for the users to navigate through the different items of clothing within a category. 
+                                        <br><br>
+                                        The Hololens gaze along with the cursor is also inherently a part of mapping since wherever the user gazes at, the cursor will follow the user’s gaze. Therefore the user’s gaze maps where the cursor is pointing at and this is the main way for the user to direct the cursor in all parts of the app.
+                                        <br><br>
+                                        <strong>Consistency:</strong>
+                                        <br>
+                                        Throughout the app, we used the same style, animations, feedback and layout to maintain consistency. All categories of clothing follow the same layout of having the garment displayed in the centre, the combine garments panel on the left hand side, and the manipulation of garments along with garment information on the right. 
+                                        <br><br>
+                                        All of the buttons also follow the same black and white style with the animation and sound feedback attached to them. Overall, the UI elements have the same font, color scheme and sizes.
+                                        <br><br>
+                                        When the user clicks the ‘Show/Hide menu’ button, the main menu will disappear and this will be replaced by a bar of buttons below the garments. These buttons are consistent with the buttons that you would see in the main menu, except that they are combined together so that it is more clean and that they are still accessible even when the menu panels are hidden.
+                                        <br><br>
+                                        <strong>Affordance:</strong>
+                                        <br>
+                                        Affordance in HCI means to give a clue about what interaction a user can do with a specific element. To achieve this, we provided a tutorial which gives a quick introduction to the user on how to use the app and how to interact with the buttons.
+                                        <br><br>
+                                        We also added a cursor that is placed in the centre of the Hololens screen so that users can click on a button by using the tap gesture or through using voice command - as instructed in the tutorials at the beginning. 
+                                        <br><br>
+                                        The feedback element of the buttons help make it more obvious for the users which buttons are clickable and which are not.
+                                        <br><br>
+                                        <center><h3><strong>Screenshots</strong></h3></center>
+                                        <br><br>
+                                        <strong>References</strong>
+                                        <br>
+                                        <li><a href="http://www.cs.toronto.edu/~jm/340S/Slides2/HCIDes.pdf">http://www.cs.toronto.edu/~jm/340S/Slides2/HCIDes.pdf</a></li>
+                                        <li><a href="http://www.designprinciplesftw.com/collections/don-normans-principles-of-design">http://www.designprinciplesftw.com/collections/don-normans-principles-of-design </a></li>
+                                        <li><a href="https://twobenches.wordpress.com/2008/06/05/don-normans-design-principles/">https://twobenches.wordpress.com/2008/06/05/don-normans-design-principles/</a> </li>
+                                        <li>Norman, D. (1988). The Design of Everyday Things. United States: 1st edition</li>
+
+
+                                    </section>
+								</div>
+
+						</section>
+
+        </article>
+
+			
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

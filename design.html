@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<!--
+	Twenty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Design</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/pages.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body class="no-sidebar">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">NET-A-PORTER AR <span>by TEAM 27</span></a></h1>
+					<nav id="nav">
+						<ul style="list-style: none;">
+							<li class="current"><li class="submenu">
+                                <a href="index.html">Home</a>
+                                <ul style="list-style: none;">
+									<li><a href="index.html#introduction">Introduction</a></li>
+									<li><a href="index.html#team">Meet the team</a></li>
+									<li><a href="index.html#features">Features</a></li>
+								</ul>
+                            
+                            </li>
+                            </li>
+                        
+							<li class="submenu">
+								<a href="research.html">Research</a>
+								<ul style="list-style: none;">
+									<li><a href="research.html#requirements">Requirements</a></li>
+                                    <li><a href="research.html#use-cases">Use Cases</a></li>
+									<li><a href="research.html#research-results">Research Results</a></li>
+								</ul>
+							</li>
+                        
+                       <li class="submenu">
+								<a href="design.html">Design</a>
+								<ul style="list-style: none;">
+									<li><a href="design.html">Design</a></li>
+                                    <li><a href="hci.html">HCI</a></li>
+								</ul>
+							</li>
+                        
+                        <li class="submenu">
+								<a href="development.html">Development</a>
+								<ul style="list-style: none;">
+									<li><a href="prototype.html">Prototype</a></li>
+									<li><a href="experiments.html">Experiments</a></li>
+                                    <li><a href="userinterface.html">User Interface</a></li>
+                                    <li><a href="testing.html">Testing</a></li>
+                                    <li><a href="development.html#plans">Plans</a></li>
+								</ul>
+							</li>
+                        
+                        <li class="submenu">
+								<a href="documentation.html">Documentation</a>
+								<ul style="list-style: none;">
+									<li><a href="https://gitlab.cs.ucl.ac.uk/vania/team27website"target="_blank">GitLab Repository</a></li>
+									<li><a href="biweekly-reports.html">Biweekly Reports</a></li>
+                                    <li><a href="documentation.html#management">Management</a></li>
+                                </ul>
+							</li>
+							
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<article id="main">
+
+					<header class="special container">
+						<span class="fa fa-puzzle-piece fa-3x"></span>
+						<h2>Design</h2>
+					</header>
+
+					<!-- One -->
+						<section class="wrapper style4 container" style="padding-top: 20px;">
+
+							<!-- Content -->
+								<div class="content">
+									<section>
+                                        <center><h3><strong>System Architecture</strong></h3></center>
+                                        <br>
+                                        <center><h3><strong>Class Diagram</strong></h3></center>
+                                        <br>
+                                        <center><h3><strong>Sequence Diagram</strong></h3></center><br>
+                                        <center><h3><strong>Design Patterns</strong></h3></center>
+                                        It is essential for us to implement good design patterns throughout our app since it helps us to write cleaner code, reuse code and facilitates development. Some design patterns that we used are inherently used in Unity while some are our own implementation of them.
+                                        <br><br><strong>Singleton</strong>
+                                        <br>
+                                        As most of the scripts available from HoloToolkit-Unity implement the Singleton design pattern, we figured that we also follow the same design pattern for the scripts that we created ourselves. The Singleton design pattern restricts the instantiation of a class to one object. There are several advantages to using this design patterns, for example, this automatically creates classes with a static initialization method and making them immutable. Another advantage is that Singleton can implement an interface which allows us to have game objects with other components on it so that we can have better organization of our GameObjects in the Unity scene. 
+                                        <br><br>
+                                        <strong>Composite</strong><br>
+                                        The Composite design pattern is described as “a container which provides the same interface as the components it contains”. This design pattern also composes objects into tree structures and are treated as hierarchies. Composite is used a lot in Unity as it allows you to have multiple functionalities within a single GameObject (renderer, scripts, animator, etc.). This is useful in our app since we have multiple elements in one GameObject but Unity will still treat this as a single entity, thus making it easier to make changes to a collection of components instead of changing them one by one.
+                                        <br><br>
+                                        <strong>Prototype</strong>
+                                        <br>
+                                        The Prototype design pattern is a core concept in Unity. The Prototype pattern is described as “a fully initialized instance to be copied or cloned”. This is the whole idea of the prefab system in Unity. Within a prefab, we can store a GameObject along with its components and properties. The prefab acts as a template from which we can create new object instances in the scene. Any changes that we make to a prefab asset are immediately reflected in all instances instantiated from it. Thus, this design pattern helps us to simplify the creation of objects that are identical, or slightly different from each other.<br><br>
+                                        <strong>Decorator</strong><br>
+                                        GameObjects in Unity can gain the ability to perform functions by having behaviours added to them. This technique is known as the Decorator design pattern. This design pattern allows behaviour to be added to an individual object without affecting the behaviour of other objects from the same class. This is especially useful when we want to add behaviours to certain buttons only when they are hovered over, but not other buttons that are static. <br><br>
+                                        <strong>Lazy Initialization</strong><br>
+                                        Lazy Initialization is a design pattern tactic of delaying the creation of an object (in our case, displaying garments from other categories) until the first time it is needed. In our app, we do not load the other scenes until it is called (when the button of a category is pressed). This is to save processing resources of the Hololens to improve loading time and thus making the app to be more efficient and increase its performance quality.<br>
+                                        
+                                        <br><center><h3><strong>Development Tools</strong></h3></center>
+                                        These are the tools that we used throughout the development of our project. <br><br>
+                                        <img src="images/slack.png" style="float:left;width:130px"><strong>Communication:</strong><br>
+                                        <strong>Slack:</strong> For communication between our team members, we used Slack to discuss about problems, brainstorming ideas, and setting up group meetings. Using this platform allows us to effectively communicate and categorize conversations to keep track of important information.<br><br>
+                                        <img src="images/googledrive.png" style="float:left;width:130px"><strong>File storage:</strong><br>
+                                        <strong>Google Drive:</strong> Google Drive is our primary file storage platform to store things like 3D model assets, picture assets, video recordings of our app and more. We also collaborate on documents like biweekly reports, presentation slides and website content on Google Docs. <br><br>
+                                        <img src="images/photoshop.jpg" style="float:left;width:130px"><strong>UI design:</strong><br>
+                                        <strong>Adobe Photoshop:</strong> For UI design, all of the buttons, panels and screens are designed in Adobe Photoshop. It is a powerful software for graphic design and allows us to create beatiful and elegant UI elements that are consistent all throughout the app.<br><br>
+                                        <img src="images/gitlab.jpg" style="float:left;width:130px"><strong>Version control:</strong><br>
+                                        <strong>Gitlab:</strong> We use GitLab as a platform where we can collaborate on the same files which also serves as a version control platform so we can recover files that were accidentally overwritten or lost. We use GitLab to store our project repository as well as the website repository.<br><br>
+                                        <img src="images/visualstudio.png" style="float:left;width:130px"><strong>IDE:</strong><br>
+                                        <strong>Visual Studio:</strong> As we implemented C# scripts on most of the GameObjects in Unity, we used Visual Studio to write the scripts as well as to deploy our app to the Hololens. Hololens app deployment can only be done in Visual Studio.
+                                        <br><br>
+                                        <center><h3><strong>Implementation Details of Key Functionalities</strong></h3></center>
+                                        <br>
+                                        <strong>References</strong>
+                                        <br>
+                                        <li>Sierra, K.; Freeman, E. (2004). Head First Design Patterns. O'Reilly Media: 1st edition</li>
+                                        <li><a href="https://sourcemaking.com/design_patterns">https://sourcemaking.com/design_patterns </a></li>
+                                        <li><a href="https://twobenches.wordpress.com/2008/06/05/don-normans-design-principles/">https://twobenches.wordpress.com/2008/06/05/don-normans-design-principles/</a> </li>
+                                        <li><a href="http://wiki.unity3d.com/index.php/Singleton">http://wiki.unity3d.com/index.php/Singleton</a></li>
+                                    </section>
+								</div>
+
+						</section>
+
+        </article>
+
+			
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
