@@ -96,8 +96,7 @@
 								<div class="content">
 									<section>
                                         <center><h3><strong>System Architecture</strong></h3></center>
-																				<div align="center"class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;xml&quot;:&quot;&lt;mxfile userAgent=\&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36\&quot; version=\&quot;6.5.5\&quot; editor=\&quot;www.draw.io\&quot; type=\&quot;google\&quot;&gt;&lt;diagram name=\&quot;Page-1\&quot;&gt;zZZdb5swFIZ/DZedMK5Jctlm7baLSpUibd2lAwasAUbGlGS/fiYcPozzwaJ17U3EeW0f+zx+Y9vB62z3RdIieRIhSx3PDXcO/ux43oq4+rcR9q3ge6gVYsnDVhoJG/6bgQjj4oqHrDQ6KiFSxQtTDESes0AZGpVS1Ga3SKTmrAWNmSVsApra6g8eqgRU5K+Ghq+MxwlMvfT8tiGjXWeopExoKOqRhB8cvJZCqPYr261Z2rDruLTjHk+09guTLFdzBnguImi7daMILyNvsbrx2gyvNK2g2CfKc63cFUXKA6q4yGHpat/xkKLKQ9akRA6+rxOu2KagQdNaawNoLVFZCs2RyBVsKdL13sOETCq2O1kF6tloTzGRMSX3ugsMwCvACX7yFhDXo93pkCejjfFBo2CIuE89MNMfgG0mQmwh/F5FQnKqxUdJM1YL+evDMfTRR2LoWwwtYLEmVpwsHP76dNt1d/8WCPGIAQQRbAFZHuGxfAset5d5yERk26p8I/Mc3yEb3nvAIRacdULVVp+h+th6/maR0nWq/4ik85P591paZloc4dWN+qe8FpfNxPLwrrkodRSktCx5cB4Y23H1ogP3E4HoZxP1KFlo3aiXQOr1iEoG7NxFddZ/5AjPTpMs1VfZq7mmY5BhhmfBczXs5Q2enA0uNlO0S4dR4/t3kgiZecgkjaIyZspKc9jxvujrTLC60gSlXpO6yhto7IzWJ7le/wsY5RAMbTN8g+baRD8PDyDPXdjvZSVya967GE+OyLlWItNH0PSsvdpMOhxepG334VmPH/4A&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
-<script type="text/javascript" src="https://www.draw.io/js/viewer.min.js"></script>
+																				<center><img src="images/sysarchitecture.png" style="width:50%"></center>
 																				<ul>
 																					<li><strong>Main application created with Unity3D and built for use on the Microsoft HoloLens.</strong></li>
 																						<ul>
@@ -155,13 +154,16 @@
                                         <strong>Visual Studio:</strong> As we implemented C# scripts on most of the GameObjects in Unity, we used Visual Studio to write the scripts as well as to deploy our app to the Hololens. Hololens app deployment can only be done in Visual Studio.
                                         <br><br>
                                         <center><h3><strong>Implementation Details of Key Functionalities</strong></h3></center>
+                                                                            <section>
+                                                                                   <center><img src="images/chatbot.png" style="width:50%"></center> 
+                                                                                    </section>
 																				<strong>Chatbot Implementation:</strong>
 																			</br></br>
 																				We integrated another group's project, the AI Chatbot, into our application using the API that they created. We setup another scene within our project that can be accessed via a button on the main menu. This scene creates a chatbox-like UI that you use to interact with the chatbot. The InputField takes your query and then makes a HTTP POST request to their API with the required information setup as a string with JSON formatting which is then converted into a byte array and sent with the POST request. A context with the chatbot is maintained via an attribute in the JSON that is maintained on our end of our use of the API.
 
 																				The request returns JSON depending on the query so the JSON is then parsed for the relevant information which is then displayed. We had to do this initially without anything to test with but an example .txt file as the group had issues with server usage and didn't want to share endpoints incase they were charged money for going over their allowed quota of server calls.
 
-																			</br></br><strong>Holographic Manipulation Implementation:</strong>
+																			</br><br><center><img src="images/manipulate.png" style="width:50%"></center> </br><strong>Holographic Manipulation Implementation:</strong>
 																			</br></br>
 																				<strong>Browsing through garments within a category:</strong>
 																				For the clothing manipulation, we created different scenes each representing a category of clothing. Within each scene, there is a Main GameObject which consists of all the garments in a category. When the “Next” or “Previous” button is clicked, the button will hide and show the corresponding garments. We also implemented a KeywordManager.cs script in the empty Managers GameObject and added the same functionality when “Next item” or “Previous item” is said by the user.</br></br>
@@ -173,8 +175,8 @@
 																				</br></br><strong>UI Implementation:</strong></br></br>
 																				The UI elements are all contained within the Canvas GameObject and similar to the garments, some buttons like the Help button are only activated (visible) when the button is triggered.
 
-
-																			</br></br><strong>Image Recognition Implementation:</strong></br>
+<br><center><img src="images/imagerecog.gif"</center></center>
+																			<br><strong>Image Recognition Implementation:</strong></br>
 																			</br>
 
 																				Another key feature of our app was image recognition. In order to achieve this we used a platform called Vuforia and its associated API for Unity, which supports image recognition and extending tracking. Despite the features it supports, it wasn’t the easiest API to initially setup, requiring a lot of extensive licensing signups and there being a fair number of issues with importing the packages as there were multiple packages that were slightly different.
