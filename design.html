@@ -29,10 +29,10 @@
 									<li><a href="index.html#team">Meet the team</a></li>
 									<li><a href="index.html#features">Features</a></li>
 								</ul>
-                            
+
                             </li>
                             </li>
-                        
+
 							<li class="submenu">
 								<a href="research.html">Research</a>
 								<ul style="list-style: none;">
@@ -41,7 +41,7 @@
 									<li><a href="research.html#research-results">Research Results</a></li>
 								</ul>
 							</li>
-                        
+
                        <li class="submenu">
 								<a href="design.html">Design</a>
 								<ul style="list-style: none;">
@@ -49,7 +49,7 @@
                                     <li><a href="hci.html">HCI</a></li>
 								</ul>
 							</li>
-                        
+
                         <li class="submenu">
 								<a href="development.html">Development</a>
 								<ul style="list-style: none;">
@@ -60,7 +60,7 @@
                                     <li><a href="development.html#plans">Plans</a></li>
 								</ul>
 							</li>
-                        
+
                         <li class="submenu">
 								<a href="documentation.html">Documentation</a>
 								<ul style="list-style: none;">
@@ -69,7 +69,7 @@
                                     <li><a href="documentation.html#management">Management</a></li>
                                 </ul>
 							</li>
-							
+
 						</ul>
 					</nav>
 				</header>
@@ -89,15 +89,35 @@
 								<div class="content">
 									<section>
                                         <center><h3><strong>System Architecture</strong></h3></center>
+																				<div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;xml&quot;:&quot;&lt;mxfile userAgent=\&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36\&quot; version=\&quot;6.5.5\&quot; editor=\&quot;www.draw.io\&quot; type=\&quot;google\&quot;&gt;&lt;diagram name=\&quot;Page-1\&quot;&gt;zZZdb5swFIZ/DZedMK5Jctlm7baLSpUibd2lAwasAUbGlGS/fiYcPozzwaJ17U3EeW0f+zx+Y9vB62z3RdIieRIhSx3PDXcO/ux43oq4+rcR9q3ge6gVYsnDVhoJG/6bgQjj4oqHrDQ6KiFSxQtTDESes0AZGpVS1Ga3SKTmrAWNmSVsApra6g8eqgRU5K+Ghq+MxwlMvfT8tiGjXWeopExoKOqRhB8cvJZCqPYr261Z2rDruLTjHk+09guTLFdzBnguImi7daMILyNvsbrx2gyvNK2g2CfKc63cFUXKA6q4yGHpat/xkKLKQ9akRA6+rxOu2KagQdNaawNoLVFZCs2RyBVsKdL13sOETCq2O1kF6tloTzGRMSX3ugsMwCvACX7yFhDXo93pkCejjfFBo2CIuE89MNMfgG0mQmwh/F5FQnKqxUdJM1YL+evDMfTRR2LoWwwtYLEmVpwsHP76dNt1d/8WCPGIAQQRbAFZHuGxfAset5d5yERk26p8I/Mc3yEb3nvAIRacdULVVp+h+th6/maR0nWq/4ik85P591paZloc4dWN+qe8FpfNxPLwrrkodRSktCx5cB4Y23H1ogP3E4HoZxP1KFlo3aiXQOr1iEoG7NxFddZ/5AjPTpMs1VfZq7mmY5BhhmfBczXs5Q2enA0uNlO0S4dR4/t3kgiZecgkjaIyZspKc9jxvujrTLC60gSlXpO6yhto7IzWJ7le/wsY5RAMbTN8g+baRD8PDyDPXdjvZSVya967GE+OyLlWItNH0PSsvdpMOhxepG334VmPH/4A&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+<script type="text/javascript" src="https://www.draw.io/js/viewer.min.js"></script>
+																				<ul>
+																					<li><strong>Main application created with Unity3D and built for use on the Microsoft HoloLens.</strong></li>
+																						<ul>
+																							<li>The main application is completely self-serving and doesn’t require use of the internet or any outside components that requires any sort of sustained connection. It was created in Unity3D with all functions written in C# scripts. Clothing is all represented as game objects and the functions with which we manipulate them all make use of transform components of the game objects to adjust their attributes at runtime in the game world.</li>
+																							<li>The UI make use of the scene structure to group different categories of clothing and the use of the Renderer component to allow the user to pick between articles of clothing.</li>
+																						</ul>
+																					<li><strong>Use of the chatbot API to integrate it into the application.</strong></li>
+																						<ul>
+																							<li>The chatbot has it’s own scene within the main application with its own UI. We use the HoloLens’ hologram keyboard to facilitate text input as queries. The queries are then sent via the API to the AI chatbot server using a POST request and the application gets a response full of information that we parse locally in order to decide what information is useful to the user.</li>
+																						</ul>
+																					<li><strong>Use of the Vuforia framework to provide the image recognition function.</strong></li>
+																				</ul>
                                         <br>
-                                        <center><h3><strong>Class Diagram</strong></h3></center>
-                                        <br>
-                                        <center><h3><strong>Sequence Diagram</strong></h3></center><br>
+                                        <center><h3><strong>Hardware</strong></h3></center>
+																				<ul>
+																					<li><strong>Microsoft HoloLens</strong><br>
+																						The Microsoft HoloLens is the device and platform on which are application is to be used. The project was made with the purpose of seeing what augmented reality can provide in emulation of a virtual personal shopping experience. This is why we haven’t made it available on other platforms. It is still pre-production and so doesn’t provide the perfect consumer experience as would have been useful for our project. This led to us evaluating the things that would actually improve it such as increasing the field of vision both horizontally and vertically, improving the resolution which would hopefully lead to an increase in photo-realism of the holograms. This was especially relevant as the realism of clothing in the HoloLens is important to providing the EIP experience.
+																					</li><br>
+																						<li><strong>Sense 3D Scanner</strong><br>
+																							We used the Sense 3D Scanner to scan clothing lent to us by NET-A-PORTER. This is a handheld scanner that we connect to a laptop with a USB cable. The Sense 3D software then takes the images sent to it by the scanner and stitches them together into a 3D model. We used a mannequin to give the clothing form while we scanned it. The scanner isn’t top of the line so it affected the quality of the scans that came out and this was detrimental to the realism we seeked to provide.
+																						</li>
+																						<br>
                                         <center><h3><strong>Design Patterns</strong></h3></center>
                                         It is essential for us to implement good design patterns throughout our app since it helps us to write cleaner code, reuse code and facilitates development. Some design patterns that we used are inherently used in Unity while some are our own implementation of them.
                                         <br><br><strong>Singleton</strong>
                                         <br>
-                                        As most of the scripts available from HoloToolkit-Unity implement the Singleton design pattern, we figured that we also follow the same design pattern for the scripts that we created ourselves. The Singleton design pattern restricts the instantiation of a class to one object. There are several advantages to using this design patterns, for example, this automatically creates classes with a static initialization method and making them immutable. Another advantage is that Singleton can implement an interface which allows us to have game objects with other components on it so that we can have better organization of our GameObjects in the Unity scene. 
+                                        As most of the scripts available from HoloToolkit-Unity implement the Singleton design pattern, we figured that we also follow the same design pattern for the scripts that we created ourselves. The Singleton design pattern restricts the instantiation of a class to one object. There are several advantages to using this design patterns, for example, this automatically creates classes with a static initialization method and making them immutable. Another advantage is that Singleton can implement an interface which allows us to have game objects with other components on it so that we can have better organization of our GameObjects in the Unity scene.
                                         <br><br>
                                         <strong>Composite</strong><br>
                                         The Composite design pattern is described as “a container which provides the same interface as the components it contains”. This design pattern also composes objects into tree structures and are treated as hierarchies. Composite is used a lot in Unity as it allows you to have multiple functionalities within a single GameObject (renderer, scripts, animator, etc.). This is useful in our app since we have multiple elements in one GameObject but Unity will still treat this as a single entity, thus making it easier to make changes to a collection of components instead of changing them one by one.
@@ -109,7 +129,7 @@
                                         GameObjects in Unity can gain the ability to perform functions by having behaviours added to them. This technique is known as the Decorator design pattern. This design pattern allows behaviour to be added to an individual object without affecting the behaviour of other objects from the same class. This is especially useful when we want to add behaviours to certain buttons only when they are hovered over, but not other buttons that are static. <br><br>
                                         <strong>Lazy Initialization</strong><br>
                                         Lazy Initialization is a design pattern tactic of delaying the creation of an object (in our case, displaying garments from other categories) until the first time it is needed. In our app, we do not load the other scenes until it is called (when the button of a category is pressed). This is to save processing resources of the Hololens to improve loading time and thus making the app to be more efficient and increase its performance quality.<br>
-                                        
+
                                         <br><center><h3><strong>Development Tools</strong></h3></center>
                                         These are the tools that we used throughout the development of our project. <br><br>
                                         <img src="images/slack.png" style="float:left;width:130px"><strong>Communication:</strong><br>
@@ -138,7 +158,7 @@
 
         </article>
 
-			
+
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
